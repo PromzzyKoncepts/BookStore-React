@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@400;500;600;700;800&family=Montserrat&family=Roboto+Slab&family=Roboto:wght@700&display=swap');
+
+body {
+  background-color: #f1f2f6;
+  margin: 0;
+  padding: 4%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  /* background-color: #fff; */
+  width: 100%;
+  margin: auto;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  grid-gap: 40px;
+  gap: 40px;
+}
+
+.header-wrapper {
+  padding: 0 4%;
+  background-color: #fff;
+  margin-bottom: 2px;
+
+}
+
+h1 {
+  font-family: sans-serif, 'poppins';
+}
+.user {
+  width: 3%;
+  float: right;
+  margin-top: -55px;
+  padding-top: 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+}
+
+.link a {
+  color: #121212;
+  text-decoration: none;
+}
+
+.book-container {
+  background-color: #fff;
+  padding: 4%;
+}
+
+.card {
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 3%;
+  box-shadow: 0 0 2px #6e6e6e;
+}
+
+.functions {
+  display: flex;
+  gap: 20px;
+  color: #4386bf;
+  font-size: 0.85rem;
+}
+
+.progress-stat {
+  width: 50%;
+}
+
+.progress-percent {
+    font-size: 40px;
+}
+
+.progress-complete {
+  margin-top: -30px;
+}
+
+.hr {
+  background-color: #282828;
+  padding: 1px;
+  height: 100px;
+  opacity: 0.3;
+}
+.break {
+  margin: 30px 0;
+  opacity: 0.5;
+}
