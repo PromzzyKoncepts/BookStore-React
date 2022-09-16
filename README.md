@@ -1,56 +1,76 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# BOOKSTORE
 
-> Description the project.
-
+> A bookstore app that allows a user add a book, displays added book with reviews and rating for each book and allows a user delete a book.
 
 ## Built With
 
-- Major languages
+- React.js and CSS3
 - Frameworks
-- Technologies used
+- Netlify, Webpack, big.js, jest, Git and Babel.
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
+[Live Demo](https://livedemo.com)
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+Node.js
+
 ### Setup
+
+To get a local copy up and running you'll need to have [NodeJS](https://nodejs.org/en/download/) installed on your local machine.
 
 ### Install
 
+After installing NodeJS please follow the next steps...
+
 ### Usage
 
-### Run tests
+```bash
+
+npm i
+
+```
+
+-- for installing dev dependecies.
+
+```bash
+
+npm run build
+
+```
+
+-- to run the project.
+
+### Testing
+
+```bash
+
+npm run start
+
+```
 
 ### Deployment
 
+```bash
 
+npm run deploy
+
+```
 
 ## Authors
 
-👤 **Author1**
+👤 **PROMISE OKECHUKWU**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@promzzykoncepts](https://github.com/PromzzyKoncepts)
+- Twitter: [@pr0mzzy](https://twitter.com/prOmzzy)
+- LinkedIn: [promiseokechukwu](https://linkedin.com/in/promiseokechukwu)
 
 ## 🤝 Contributing
 
@@ -64,12 +84,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
+- You for viewing this repo and dropping a ⭐️.
+- Microverse Inc
 - etc
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./MIT.md) licensed.
