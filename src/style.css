@@ -24,12 +24,12 @@ body {
   padding: 0 4%;
   background-color: #fff;
   margin-bottom: 2px;
-
 }
 
 h1 {
   font-family: sans-serif, 'poppins';
 }
+
 .user {
   width: 3%;
   float: right;
@@ -76,7 +76,7 @@ h1 {
 }
 
 .progress-percent {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .progress-complete {
@@ -89,6 +89,7 @@ h1 {
   height: 100px;
   opacity: 0.3;
 }
+
 .break {
   margin: 30px 0;
   opacity: 0.5;

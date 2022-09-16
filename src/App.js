@@ -5,10 +5,10 @@ import BookList from './components/BookList';
 import NavBar from './components/NavBar';
 
 const App = () => (
-  <div className='wrapper'>
+  <div className="wrapper">
     <NavBar />
     <Routes>
-      <Route path="/" exact element={<BookList/>} />
+      <Route path="/" exact element={<BookList />} />
     </Routes>
   </div>
 );
