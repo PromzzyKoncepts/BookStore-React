@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-[Live Demo](https://livedemo.com)
+[Live Demo](https://bookstore-redux.netlify.app/)
 
 ## Getting Started
 
