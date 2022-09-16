@@ -12,7 +12,7 @@ const Update = {
 const Category = () => (
   <>
     <div style={{ margin: 'auto' }}>
-      <button type='button' style={Update}>Check Status</button>
+      <button type="button" style={Update}>Check Status</button>
     </div>
   </>
 );
