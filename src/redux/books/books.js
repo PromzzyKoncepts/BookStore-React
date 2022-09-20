@@ -6,12 +6,17 @@ const REMOVE_BOOK = 'BOOKSTORE-REACT/books/REMOVE_BOOK'
 const InitialState = [];
 
 // add reducers
-const reducers = (state = InitialState, action) => {
+const handleBookRed = (state = InitialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
-      return {
-        
-      }
+      return [
+        ...state, action.book
+      ]
+    case REMOVE_BOOK:
+      return [
+        state.filter((book) => book != action.bookId)
+      ]
+    default: return state
   }
 }
 
@@ -26,4 +31,6 @@ const AddBook = (book) = ({
 const RemoveBook = (bookId) = ({
     type: REMOVE_BOOK,
     bookId
-  })
+})
+
+export { handleBookRed, RemoveBook, AddBook}
