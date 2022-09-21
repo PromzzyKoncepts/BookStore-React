@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-<img src="./Screenshot.png"></img>
+<img src="./Screenshot.png" width='500px'></img>
 [Live Demo](https://bookstore-redux.netlify.app/)
 
 ## Getting Started
