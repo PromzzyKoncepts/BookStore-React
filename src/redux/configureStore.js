@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 import { handleBookRed } from './books/books';
-import checkStatus from './Categories/categories';
+import { checkStatusRed } from './Categories/categories';
 
 const allReducers = combineReducers({
   book: handleBookRed,
-  status: checkStatus,
+  status: checkStatusRed,
 });
 
 const store = configureStore({ reducer: allReducers });
