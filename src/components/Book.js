@@ -1,4 +1,6 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { RemoveBook } from '../redux/books/books';
 
 const Update = {
   backgroundColor: '#0290FF',
@@ -9,7 +11,11 @@ const Update = {
   cursor: 'pointer',
 };
 const Book = (obj) => {
-  const { title, author } = obj;
+  const { id, title, author } = obj;
+  const dispatch = useDispatch();
+  const RemoveBtn = () => {
+    dispatch(RemoveBook(id));
+  };
   return (
     <div className="card">
       <div className="card-1">
@@ -19,7 +25,7 @@ const Book = (obj) => {
         <div className="functions">
           <p>Comments</p>
           <hr />
-          <p>Remove</p>
+          <button type="button" onClick={() => RemoveBtn(id)}>Remove</button>
           <hr />
           <p>Edit</p>
         </div>

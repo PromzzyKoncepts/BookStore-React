@@ -1,4 +1,7 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { useDispatch } from 'react-redux';
+import { AddBook } from '../redux/books/books';
 
 const inputStyle = {
   padding: '10px',
@@ -12,36 +15,52 @@ const form = {
   flexDirection: 'row',
   width: '100%',
 };
-const AddBooks = () => (
-  <>
-    <form>
-      <label htmlFor="temp-id">ADD NEW BOOK</label>
-      <div style={form}>
-        <input
-          id="temp-id"
-          type="text"
-          name="title"
-          required
-          placeholder="Book title"
-          style={inputStyle}
-        />
-        <input
-          type="text"
-          name="author"
-          required
-          placeholder="Author"
-          style={inputStyle}
-        />
-        <button
-          style={{
-            color: '#fff', border: 'none', padding: '0 30px', background: '#0290FF', borderRadius: '5px', fontWeight: '600', cursor: 'pointer',
-          }}
-          type="submit"
-        >
-          Add Book
-        </button>
-      </div>
-    </form>
-  </>
-);
+const AddBooks = () => {
+  const dispatch = useDispatch();
+  const DisplayBook = () => {
+    const title = document.querySelector('.title').value;
+    const author = document.querySelector('.author').value;
+    if (title !== '' && author !== '') {
+      dispatch(AddBook({ id: uuidv4(), title, author }));
+    }
+  };
+
+  return (
+    <>
+      <form>
+        <label htmlFor="temp-id">ADD NEW BOOK</label>
+        <div style={form}>
+          <input
+            id="temp-id"
+            type="text"
+            name="title"
+            required
+            placeholder="Book title"
+            style={inputStyle}
+            className="title"
+          />
+          <input
+            type="text"
+            name="author"
+            required
+            placeholder="Author"
+            style={inputStyle}
+            className="author"
+          />
+          <button
+            style={{
+              color: '#fff', border: 'none', padding: '0 30px', background: '#0290FF', borderRadius: '5px', fontWeight: '600', cursor: 'pointer',
+            }}
+            type="button"
+            onClick={() => {
+              DisplayBook();
+            }}
+          >
+            Add Book
+          </button>
+        </div>
+      </form>
+    </>
+  );
+};
 export default AddBooks;

@@ -3,7 +3,23 @@ const ADD_BOOK = 'BOOKSTORE-REACT/books/ADD_BOOK';
 const REMOVE_BOOK = 'BOOKSTORE-REACT/books/REMOVE_BOOK';
 
 // set initialState = []
-const InitialState = [];
+const InitialState = [
+  {
+    id: 0,
+    title: 'Where we left off',
+    author: 'Eze Chisimdi',
+  },
+  {
+    id: 1,
+    title: 'The Gods are dead',
+    author: 'Mike Bamiloye',
+  },
+  {
+    id: 2,
+    title: 'Things Fall Apart',
+    author: 'Promise Okechukwu',
+  },
+];
 
 // add reducers
 const handleBookRed = (state = InitialState, action) => {
@@ -13,9 +29,7 @@ const handleBookRed = (state = InitialState, action) => {
         ...state, action.book,
       ];
     case REMOVE_BOOK:
-      return [
-        state.filter((book) => book !== action.bookId),
-      ];
+      return state.filter((book) => book.id !== action.bookId);
     default: return state;
   }
 };

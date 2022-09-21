@@ -12,6 +12,8 @@
 
 ## Live Demo
 
+<img src="./Screenshot.png" width='600px'></img>
+<br/>
 [Live Demo](https://bookstore-redux.netlify.app/)
 
 ## Getting Started
