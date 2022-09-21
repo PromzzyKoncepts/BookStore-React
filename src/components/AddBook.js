@@ -17,15 +17,6 @@ const form = {
 };
 const AddBooks = () => {
   const dispatch = useDispatch();
-
-  // const [title, setTitle] = useState('');
-  // const [author, setAuthor] = useState('');
-  // const targetAuthor = (e) => {
-  //   setAuthor(e.target.value);
-  // };
-  // const targetTitle = (e) => {
-  //   setTitle(e.target.value);
-  // };
   const DisplayBook = () => {
     const title = document.querySelector('.title').value;
     const author = document.querySelector('.author').value;
