@@ -21,7 +21,7 @@ const Book = (obj) => {
     <div className="card">
       <div className="card-1">
         <p style={{ fontWeight: 600, opacity: 0.5 }}>Action</p>
-        <h2 style={{ marginTop: '-10px', fontWeight: '800' }}>{title}</h2>
+        <h2 className="tit-heading" style={{ marginTop: '-10px', fontWeight: '800' }}>{title}</h2>
         <p style={{ marginTop: '-15px', color: '#4386bf' }}>{author}</p>
         <div className="functions">
           <p>Comments</p>
@@ -32,8 +32,13 @@ const Book = (obj) => {
         </div>
       </div>
       <div className="card-2">
-        <p className="progress-percent">64%</p>
-        <p className="progress-complete">Completed</p>
+        <div className="rotate">
+          <span className="circle"> </span>
+        </div>
+        <div>
+          <p className="progress-percent">64%</p>
+          <p className="progress-complete">Completed</p>
+        </div>
       </div>
       <div className="hr" />
       <div className="card-3">
