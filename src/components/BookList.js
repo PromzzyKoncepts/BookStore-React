@@ -1,10 +1,15 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getBook } from '../redux/books/books';
 import AddBooks from './AddBook';
 import Book from './Book';
 
 const BookList = () => {
   const bookObj = useSelector((state) => state.book);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBook());
+  }, [dispatch]);
   return (
     <div className="book-container">
       {bookObj.map((book) => (
