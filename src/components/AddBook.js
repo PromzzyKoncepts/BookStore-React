@@ -57,8 +57,9 @@ const AddBooks = () => {
             className="author"
           />
           <button
+            className="add"
             style={{
-              color: '#fff', border: 'none', padding: '0 30px', background: '#0290FF', borderRadius: '5px', fontWeight: '600', cursor: 'pointer',
+              color: '#fff', border: 'none', padding: '0 30px', borderRadius: '5px', fontWeight: '600', cursor: 'pointer',
             }}
             type="button"
             onClick={DisplayBook}

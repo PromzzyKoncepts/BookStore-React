@@ -71,6 +71,25 @@ h1 {
   font-size: 0.85rem;
 }
 
+.author:focus {
+  outline: 1px solid;
+  border-radius: 4px;
+}
+
+.add {
+  background: #0290FF;
+}
+
+.add:hover {
+  box-shadow: 0 0 6px #6e6e6e;
+  background: brown;
+}
+
+.title:focus {
+  outline: 1px solid;
+  border-radius: 4px;
+}
+
 .progress-stat {
   width: 50%;
 }
