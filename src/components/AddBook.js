@@ -23,7 +23,6 @@ const AddBooks = () => {
     const title = document.querySelector('.title').value;
     const author = document.querySelector('.author').value;
     if (title !== '' && author !== '') {
-      console.log(title, 'tit', author);
       dispatch(AddnewBook(id, title, author));
     }
   };
