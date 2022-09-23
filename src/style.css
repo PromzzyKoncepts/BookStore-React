@@ -83,6 +83,7 @@ h1 {
 .add:hover {
   box-shadow: 0 0 6px #6e6e6e;
   background: brown;
+  transition: all 0.5s ease-in-out;
 }
 
 .title:focus {
