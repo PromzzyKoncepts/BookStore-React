@@ -26,6 +26,12 @@ body {
   margin-bottom: 2px;
 }
 
+.card-2 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
 h1 {
   font-family: sans-serif, 'poppins';
 }
@@ -86,6 +92,22 @@ h1 {
   transition: all 0.5s ease-in-out;
 }
 
+.circle {
+  border: 8px solid #3498db;
+  border-radius: 100%;
+  border-left: 8px solid #f3f3f3;
+  width: 120px;
+  height: 120px;
+  padding: 25px 32px;
+  background-color: #fff;
+}
+
+.rotate {
+  transform: rotate(40deg);
+  margin-top: 30px;
+  /* background-color: #0290ff; */
+}
+
 .title:focus {
   outline: 1px solid;
   border-radius: 4px;
@@ -135,4 +157,8 @@ h1 {
   font-size: 3rem;
   text-align: center;
   color: brown;
+}
+
+.tit-heading {
+  font-family: 'Roboto-Slab', sans-serif;
 }
