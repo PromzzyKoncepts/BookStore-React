@@ -10,12 +10,7 @@ const Update = {
   borderRadius: '4px',
   cursor: 'pointer',
 };
-const button = {
-  border: 'none',
-  background: 'none',
-  color: '#4386bf',
-  cursor: 'pointer',
-};
+
 const Book = (obj) => {
   const { id, title, author } = obj;
   const dispatch = useDispatch();
@@ -31,7 +26,7 @@ const Book = (obj) => {
         <div className="functions">
           <p>Comments</p>
           <hr />
-          <button style={button} type="button" onClick={() => RemoveBtn(id)}>Remove</button>
+          <button className="button" type="button" onClick={() => RemoveBtn(id)}>Remove</button>
           <hr />
           <p>Edit</p>
         </div>
