@@ -15,7 +15,12 @@ const form = {
   flexDirection: 'row',
   width: '100%',
 };
-const clearInput ()
+const clearInput = () => {
+  const title = document.querySelector('.title');
+  const author = document.querySelector('.author');
+  title.value = '';
+  author.value = '';
+};
 const AddBooks = () => {
   const dispatch = useDispatch();
   const id = uuidv4();
@@ -25,6 +30,7 @@ const AddBooks = () => {
     const author = document.querySelector('.author').value;
     if (title !== '' && author !== '') {
       dispatch(AddnewBook(id, title, author));
+      clearInput();
     }
   };
 
