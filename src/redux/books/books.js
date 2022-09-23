@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const appId = 'ei3pYzTw0ELsYPNXHk8a';
 const Url = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appId}/books/`;
+
 // adding actions type names
 const ADD_BOOK = 'BOOKSTORE-REACT/books/ADD_BOOK';
 const REMOVE_BOOK = 'BOOKSTORE-REACT/books/REMOVE_BOOK';
@@ -17,24 +18,11 @@ const AddnewBook = (id, titName, authName) => (dispatch) => {
     dispatch({
       type: ADD_BOOK,
       book: {
-        id, titName, authName,
+        id, title: titName, author: authName,
       },
     });
   });
 };
-
-// const AddnewBook = (id, titName, authName) => {
-//   axios({
-//     method: 'post',
-//     url: Url,
-//     data: {
-//       item_id: id,
-//       title: titName,
-//       author: authName,
-//       category: 'Action',
-//     },
-//   });
-// };
 
 const getBook = () => (dispatch) => {
   axios.get(Url).then((res) => {
@@ -51,7 +39,8 @@ const getBook = () => (dispatch) => {
 
 // action creator for adding a book
 const RemoveBook = (id) => (dispatch) => {
-  axios.delete(`${Url}${id}`, {
+  const urlId = `${Url}${id}`;
+  axios.delete(urlId, {
     item_id: id,
   }).then(() => {
     dispatch({
@@ -77,19 +66,12 @@ const handleBookRed = (state = InitialState, action) => {
         },
       ];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.bookId);
+      return state.filter((book) => book.id !== action.id);
     case GET_BOOK:
       return [...action.payload];
     default: return state;
   }
 };
-
-// add action creators
-// action creator for adding a book
-// const RemoveBook = (bookId) => ({
-//   type: REMOVE_BOOK,
-//   bookId,
-// });
 
 export {
   handleBookRed, AddnewBook, getBook, RemoveBook,

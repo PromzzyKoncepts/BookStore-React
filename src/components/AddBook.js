@@ -15,6 +15,7 @@ const form = {
   flexDirection: 'row',
   width: '100%',
 };
+const clearInput ()
 const AddBooks = () => {
   const dispatch = useDispatch();
   const id = uuidv4();
