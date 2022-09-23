@@ -19,10 +19,10 @@ const Category = () => {
   };
   return (
     <>
-      <p>
+      <button onClick={() => display()} type="button" style={Update}>Check Status</button>
+      <p className="status">
         {Status}
       </p>
-      <button onClick={() => display()} type="button" style={Update}>Check Status</button>
     </>
   );
 };
