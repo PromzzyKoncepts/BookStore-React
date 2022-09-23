@@ -8,7 +8,6 @@ const REMOVE_BOOK = 'BOOKSTORE-REACT/books/REMOVE_BOOK';
 const GET_BOOK = 'BOOKSTORE-REACT/books/GET_BOOK';
 
 const AddnewBook = (id, titName, authName) => (dispatch) => {
-  console.log('>>>>', id, 'id', titName, 'title', authName, 'auth');
   axios.post(Url, {
     item_id: id,
     title: titName,
@@ -49,6 +48,19 @@ const getBook = () => (dispatch) => {
     dispatch({ type: GET_BOOK, payload: books });
   });
 };
+
+// action creator for adding a book
+const RemoveBook = (id) => (dispatch) => {
+  axios.delete(`${Url}${id}`, {
+    item_id: id,
+  }).then(() => {
+    dispatch({
+      type: REMOVE_BOOK,
+      id,
+    });
+  });
+};
+
 // set initialState = []
 const InitialState = [];
 
@@ -74,11 +86,10 @@ const handleBookRed = (state = InitialState, action) => {
 
 // add action creators
 // action creator for adding a book
-// action creator for adding a book
-const RemoveBook = (bookId) => ({
-  type: REMOVE_BOOK,
-  bookId,
-});
+// const RemoveBook = (bookId) => ({
+//   type: REMOVE_BOOK,
+//   bookId,
+// });
 
 export {
   handleBookRed, AddnewBook, getBook, RemoveBook,
