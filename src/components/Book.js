@@ -10,12 +10,7 @@ const Update = {
   borderRadius: '4px',
   cursor: 'pointer',
 };
-const button = {
-  border: 'none',
-  background: 'none',
-  color: '#4386bf',
-  cursor: 'pointer',
-};
+
 const Book = (obj) => {
   const { id, title, author } = obj;
   const dispatch = useDispatch();
@@ -26,19 +21,24 @@ const Book = (obj) => {
     <div className="card">
       <div className="card-1">
         <p style={{ fontWeight: 600, opacity: 0.5 }}>Action</p>
-        <h2 style={{ marginTop: '-10px', fontWeight: '800' }}>{title}</h2>
+        <h2 className="tit-heading" style={{ marginTop: '-10px', fontWeight: '800' }}>{title}</h2>
         <p style={{ marginTop: '-15px', color: '#4386bf' }}>{author}</p>
         <div className="functions">
           <p>Comments</p>
           <hr />
-          <button style={button} type="button" onClick={() => RemoveBtn(id)}>Remove</button>
+          <button className="button" type="button" onClick={() => RemoveBtn(id)}>Remove</button>
           <hr />
           <p>Edit</p>
         </div>
       </div>
       <div className="card-2">
-        <p className="progress-percent">64%</p>
-        <p className="progress-complete">Completed</p>
+        <div className="rotate">
+          <span className="circle"> </span>
+        </div>
+        <div>
+          <p className="progress-percent">64%</p>
+          <p className="progress-complete">Completed</p>
+        </div>
       </div>
       <div className="hr" />
       <div className="card-3">

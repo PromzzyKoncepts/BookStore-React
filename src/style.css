@@ -26,6 +26,12 @@ body {
   margin-bottom: 2px;
 }
 
+.card-2 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
 h1 {
   font-family: sans-serif, 'poppins';
 }
@@ -71,12 +77,50 @@ h1 {
   font-size: 0.85rem;
 }
 
+.author:focus {
+  outline: 1px solid;
+  border-radius: 4px;
+}
+
+.add {
+  background: #0290ff;
+}
+
+.add:hover {
+  box-shadow: 0 0 6px #6e6e6e;
+  background: brown;
+  transition: all 0.5s ease-in-out;
+}
+
+.circle {
+  border: 8px solid #3498db;
+  border-radius: 100%;
+  border-left: 8px solid #f3f3f3;
+  width: 120px;
+  height: 120px;
+  padding: 25px 32px;
+  background-color: #fff;
+}
+
+.rotate {
+  transform: rotate(40deg);
+  margin-top: 30px;
+
+  /* background-color: #0290ff; */
+}
+
+.title:focus {
+  outline: 1px solid;
+  border-radius: 4px;
+}
+
 .progress-stat {
   width: 50%;
 }
 
 .progress-percent {
   font-size: 40px;
+  color: #0290ff;
 }
 
 .progress-complete {
@@ -93,4 +137,29 @@ h1 {
 .break {
   margin: 30px 0;
   opacity: 0.5;
+}
+
+.button {
+  border: none;
+  background: none;
+  color: #4386bf;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: brown;
+}
+
+.button:active {
+  color: grey;
+}
+
+.status {
+  font-size: 3rem;
+  text-align: center;
+  color: brown;
+}
+
+.tit-heading {
+  font-family: 'Roboto-Slab', sans-serif;
 }
