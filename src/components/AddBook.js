@@ -1,7 +1,7 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { AddBook } from '../redux/books/books';
+import { AddnewBook } from '../redux/books/books';
 
 const inputStyle = {
   padding: '10px',
@@ -17,11 +17,14 @@ const form = {
 };
 const AddBooks = () => {
   const dispatch = useDispatch();
-  const DisplayBook = () => {
+  const id = uuidv4();
+  const DisplayBook = (e) => {
+    e.preventDefault();
     const title = document.querySelector('.title').value;
     const author = document.querySelector('.author').value;
     if (title !== '' && author !== '') {
-      dispatch(AddBook({ id: uuidv4(), title, author }));
+      console.log(title, 'tit', author);
+      dispatch(AddnewBook(id, title, author));
     }
   };
 
@@ -52,9 +55,7 @@ const AddBooks = () => {
               color: '#fff', border: 'none', padding: '0 30px', background: '#0290FF', borderRadius: '5px', fontWeight: '600', cursor: 'pointer',
             }}
             type="button"
-            onClick={() => {
-              DisplayBook();
-            }}
+            onClick={DisplayBook}
           >
             Add Book
           </button>
