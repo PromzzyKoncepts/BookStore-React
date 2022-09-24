@@ -147,11 +147,14 @@ h1 {
 }
 
 .button:hover {
-  color: brown;
+  background-color: #4386bf;
+  border-radius: 5px;
+  padding: 5px 9px;
+  color: #fff;
 }
 
 .button:active {
-  color: grey;
+  background-color: grey;
 }
 
 .status {
